@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    h1 {text-align: center;}
+    label {text-align: center;}
+    input {text-align: center;}
+    .form-center {
+  display:flex;
+  justify-content: center;
+}
+body {
+  background-image: url('pngtree-cute-hand-drawn-style-mathematics-education-pink-plaid-background-image_337364.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+    <title>Length Conversion Calculator</title>
+    <script>
+        function convertLength() {
+            var millimeters = parseFloat(document.getElementById("millimeters").value);
+            var centimeters = millimeters / 10;
+            var meters = millimeters / 1000;
+            var kilometers = millimeters / 1000000;
+
+            document.getElementById("centimeters").value = centimeters;
+            document.getElementById("meters").value = meters;
+            document.getElementById("kilometers").value = kilometers;
+        }
+    </script>
+</head>
+<body style="background-color: darkblue;">
+    <h1 style="color: black;"> Length Conversion Calculator</h1>
+        <div class="form-center">
+            <label for="millimeters" style="color: black;">Millimeters:</label>
+            <input type="text" id="millimeters" oninput="convertLength()">
+        </div>
+    <br><br>
+        <div class="form-center">
+            <label for="centimeters" style="color: black;">Centimeters:</label>
+            <input type="text" id="centimeters" readonly>
+        </div>
+    <br><br>
+        <div class="form-center"> 
+            <label for="meters" style="color: black;">Meters:</label>
+            <input type="text" id="meters" readonly>
+        </div>
+    <br><br>
+        <div class="form-center"> 
+            <label for="kilometers" style="color: black;">Kilometers:</label>
+            <input type="text" id="kilometers" readonly>
+        </div>
+</body>
+</html>
